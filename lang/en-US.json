@@ -1,0 +1,151 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for MCFacebookInstantExtended.",
+	"text": {
+		"plugins": {
+			"massivecube_facebookinstantextended": {
+				"name": "MCFacebookInstantExtended",
+				"description": "An example third-party plugin.",
+				"help-url": "https://www.construct.net",
+				"properties": {
+					"test-property": {
+						"name": "Test property",
+						"desc": "A test number property. Displayed by 'Alert' action."
+					}
+				},
+				"aceCategories": {
+					"fbinst": "Facebook Instant Games"
+				},
+				"conditions": {
+					"isCanMatch": {
+						"list-name": "Player can match.",
+						"display-text": "Player can match any game.",
+						"description": "Call when the player can match any game."
+					},
+					"conCanNotMatchAsync": {
+						"list-name": "Player can not match.",
+						"display-text": "Player can not match any game.",
+						"description": "Call when the player can not match any game."
+					},
+					"joinedMatchGame": {
+						"list-name": "Player joined the match.",
+						"display-text": "Player joined the match.",
+						"description": "The player joined the match."
+					},
+					"chooseAsyncSuc": {
+						"list-name": "Choose Async successful.",
+						"display-text": "Choose Async successful.",
+						"description": "Choose Async successful."
+					}
+				},
+				"actions": {
+					"init": {
+						"list-name": "Init",
+						"display-text": "Connect Plugin with Facebook Instant Games Plugin",
+						"description": "Connect the Plugin with the official Facebook Instant Games Plugin."
+					},
+					"getSupportedApis": {
+						"list-name": "Get Supported APIs",
+						"display-text": "Get Supported APIs",
+						"description": "Provides a list of API functions that are supported by the client."
+					},
+					"quit": {
+						"list-name": "Quit",
+						"display-text": "Quit Game",
+						"description": "Quit the Game."
+					},
+					"choose-async": {
+						"list-name": "Choose Async",
+						"display-text": "Choose Async",
+						"description": "Choose Async."
+					},
+					"switchgame-async": {
+						"list-name": "Switch Game Async",
+						"display-text": "Switch to Game with ID [i]{0}[/i]",
+						"description": "Switch Game Async.",
+						"params": {
+							"gameid": {
+								"name": "GameID",
+								"desc": "Switch game to GameID"
+							}
+						}
+					},
+					"match-async-player": {
+						"list-name": "Match Player Async",
+						"display-text": "Match Player Async to [i]{0}[/i] and switch context [i]{1}[/i]",
+						"description": "Attempts to match the current player with other users looking for people to play with.",
+						"params": {
+							"matchtag": {
+								"name": "MatchTag",
+								"desc": "Optional extra information about the player used to group them with similar players."
+							},
+							"switchcontext": {
+								"name": "SwitchContext",
+								"desc": "Optional extra parameter that specifies whether the player should be immediately switched to the new context when a match is found."
+							}
+						}
+					},
+					"checkCanMatchAsync": {
+						"list-name": "Check Player can Match",
+						"display-text": "Check Player can Match",
+						"description": "Checks if the current player is eligible for the matchPlayerAsync API."
+					},
+					"update-async": {
+						"list-name": "Update Async",
+						"display-text": "Update Async B64: [i]{0}[/i] with text [i]{7}[/i] and stored data [i]{1}[/i] and action [i]{2}[/i] and notification [i]{3}[/i] and strategy [i]{4}[/i] and cta [i]{5}[/i] and template [i]{6}[/i]",
+						"description": "Update Async.",
+						"params": {
+							"imageobj": {
+								"name": "B64",
+								"desc": "Image from Base64-String"
+							},
+							"txtdata": {
+								"name": "Data",
+								"desc": "Data to save"
+							},
+							"action": {
+								"name": "Action",
+								"desc": "Set action (CUSTOM)"
+							},
+							"notification": {
+								"name": "Notification",
+								"desc": "Set Notification (NO_PUSH)"
+							},
+							"strategy": {
+								"name": "Strategy",
+								"desc": "Set Strategy (IMMEDIATE)"
+							},
+							"cta": {
+								"name": "cta",
+								"desc": "Set cta"
+							},
+							"template": {
+								"name": "Template",
+								"desc": "Set Template"
+							},
+							"text": {
+								"name": "Text",
+								"desc": "Set Text"
+							}
+							
+						}
+					}
+				},
+				"expressions": {
+					"getSupportedApis": {
+						"description": "Provides a list of API functions that are supported by the client.",
+						"translated-name": "getSupportedApis"
+					},
+					"getCanMatchAsync": {
+						"description": "Checks if the current player is eligible for the matchPlayerAsync API.",
+						"translated-name": "getCanMatchAsync"
+					},
+					"getCatalog": {
+						"description": "Fetches the game's product catalog.",
+						"translated-name": "getCatalog"
+					}
+				}
+			}
+		}
+	}
+}

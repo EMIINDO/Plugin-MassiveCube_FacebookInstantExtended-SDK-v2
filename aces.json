@@ -1,0 +1,88 @@
+﻿{
+	"fbinst": {
+		"conditions": [
+			{
+				"id": "isCanMatch",
+				"scriptName": "conCanMatchAsync",
+				"isTrigger": true
+			},
+			{
+				"id": "conCanNotMatchAsync",
+				"scriptName": "conCanNotMatchAsync",
+				"isTrigger": true
+			},
+			{
+				"id": "joinedMatchGame",
+				"scriptName": "joinedMatchGame",
+				"isTrigger": true
+			},
+			{
+				"id": "chooseAsyncSuc",
+				"scriptName": "chooseAsyncSuc",
+				"isTrigger": true
+			}
+		],
+		"actions": [
+			{
+				"id": "init",
+				"scriptName": "init",
+				"highlight": true
+			},
+			{
+				"id": "choose-async",
+				"scriptName": "chooseAsync",
+				"highlight": true
+			},
+			{
+				"id": "switchgame-async",
+				"scriptName": "switchGameAsync",
+				"highlight": true,
+				"params": [
+					{	"id": "gameid",	"type": "string" }
+				]
+			},
+			{
+				"id": "update-async",
+				"scriptName": "updateAsync",
+				"highlight": true,
+				"params": [
+					{	"id": "imageobj",	"type": "string" },
+					{	"id": "txtdata",		"type": "string" },
+					{	"id": "action",		"type": "string" },
+					{	"id": "notification",	"type": "string" },
+					{	"id": "strategy",	"type": "string" },
+					{	"id": "cta",	"type": "string" },
+					{	"id": "template",	"type": "string" },
+					{	"id": "text",	"type": "string" }
+				]
+			},
+			{
+				"id": "match-async-player",
+				"scriptName": "matchAsyncPlayer",
+				"highlight": true,
+				"params": [
+					{	"id": "matchtag",	"type": "string" },
+					{	"id": "switchcontext", "type": "number"	}
+				]
+			},
+			{
+				"id": "checkCanMatchAsync",
+				"scriptName": "checkCanMatchAsync",
+				"highlight": true
+			}
+		],
+		"expressions": [
+			{
+				"id": "getSupportedApis",
+				"expressionName": "getSupportedApis",
+				"returnType": "string"
+			},
+			{
+				"id": "getCanMatchAsync",
+				"expressionName": "getCanMatchAsync",
+				"returnType": "number"
+			}
+
+		]
+	}
+}
